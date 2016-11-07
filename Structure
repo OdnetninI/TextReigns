@@ -1,0 +1,17 @@
+Juego:
+  - Reino
+    - Rey
+      - Años al poder
+      - Nombre
+    - Iglesia, Población, Ejercito y Dinero
+
+  - Tarjetas
+    - Texto
+    - Opción 1
+    - Opción 2
+    - Opción 3
+    - ...
+
+  - Opción
+    - Texto
+    - Iglesia, Población, Ejercito y Dinero
