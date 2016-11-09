@@ -13,13 +13,13 @@ class Card {
     Option ops[MAX_OPTIONS];
 
   public:
-    Cards();
+    Card();
 
     void setText (const char* text);
     char* getText ();
 
     void setOption(Option& option, uint32_t i);
-    Option& getOption();
+    Option* getOption(uint32_t i);
 };
 
 #endif /* __CARD_HPP__ */
