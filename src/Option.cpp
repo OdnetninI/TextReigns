@@ -12,11 +12,12 @@ Option::Option(const char* text, struct ReignPowers powers) {
   this->change = powers;
 }
 
-Option::Option(Option& option) {
-  this->change.church = option.change.church;
-  this->change.people = option.change.people;
-  this->change.army = option.change.army;
-  this->change.money = option.change.money;
+Option::Option(Option* option) {
+  this->text = option->text;
+  this->change.church = option->change.church;
+  this->change.people = option->change.people;
+  this->change.army = option->change.army;
+  this->change.money = option->change.money;
 }
 
 void Option::setText (const char* text) {

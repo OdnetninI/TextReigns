@@ -4,7 +4,7 @@
 #include <cstdint>
 
 struct ReignPowers {
-  uint32_t church, people, army, money;
+  int32_t church, people, army, money;
 };
 
 #endif /* __REIGNPOWERS_HPP__ */

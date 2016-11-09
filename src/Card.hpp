@@ -10,7 +10,7 @@
 class Card {
   private:
     std::string text;
-    Option ops[MAX_OPTIONS];
+    Option* ops[MAX_OPTIONS];
 
   public:
     Card();
@@ -18,7 +18,7 @@ class Card {
     void setText (const char* text);
     char* getText ();
 
-    void setOption(Option& option, uint32_t i);
+    void setOption(Option* option, uint32_t i);
     Option* getOption(uint32_t i);
 };
 

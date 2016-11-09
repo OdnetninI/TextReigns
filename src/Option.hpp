@@ -12,7 +12,7 @@ class Option {
   public:
     Option();
     Option(const char* text, struct ReignPowers powers);
-    Option(Option& option);
+    Option(Option* option);
 
     void setText (const char* text);
     char* getText ();
