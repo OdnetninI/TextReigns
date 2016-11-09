@@ -33,4 +33,4 @@ add_executable(${EXECUTABLE_NAME} ${LOG_SOURCES})
 # Install target
 install(TARGETS ${EXECUTABLE_NAME} DESTINATION .)
 
-file(COPY ./Data DESTINATION .)
+#file(COPY ./Data DESTINATION .)

@@ -22,4 +22,4 @@ class Card {
     Option& getOption();
 };
 
-#ifndef /* __CARD_HPP__ */
+#endif /* __CARD_HPP__ */

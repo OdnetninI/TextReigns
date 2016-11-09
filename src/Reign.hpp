@@ -23,4 +23,4 @@ class Reign {
     struct ReignPowers getReignPowers ();
 };
 
-#ifndef /* __REIGN_HPP__ */
+#endif /* __REIGN_HPP__ */

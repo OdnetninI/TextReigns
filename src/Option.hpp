@@ -21,4 +21,4 @@ class Option {
     struct ReignPowers getChange ();
 };
 
-#ifndef /* __OPTION_HPP__ */
+#endif /* __OPTION_HPP__ */

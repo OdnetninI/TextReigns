@@ -20,4 +20,4 @@ class King {
     char* getName ();
 };
 
-#ifndef /* __KING_HPP__ */
+#endif /* __KING_HPP__ */
