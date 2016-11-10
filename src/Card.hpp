@@ -14,9 +14,10 @@ class Card {
 
   public:
     Card();
+    ~Card();
 
-    void setText (const char* text);
-    char* getText ();
+    void setText(const char* text);
+    char* getText();
 
     void setOption(Option* option, uint32_t i);
     Option* getOption(uint32_t i);

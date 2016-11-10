@@ -5,6 +5,11 @@ Card::Card() {
     this->ops[i] = nullptr;
 }
 
+Card::~Card() {
+  for (uint64_t i = 0; i < MAX_OPTIONS; i++)
+    delete this->ops[i];
+}
+
 void Card::setText(const char* text) {
   this->text = text;
 }
