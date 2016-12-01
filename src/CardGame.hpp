@@ -3,17 +3,20 @@
 
 #include "Reign.hpp"
 
+class Card;
+
 class CardGame {
   private:
     Reign* actualReign;
 
   public:
+    CardGame();
     // Before new game, old game is deleted (free)
     void newGame(Reign* reign);
 
     Reign* getLastGame();
 
-    void gameLoop();
+    void gameLoop(Card** cards);
 };
 
-#endif /* __CardGAME_HPP__ */
+#endif /* __CARDGAME_HPP__ */
