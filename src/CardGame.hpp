@@ -11,6 +11,7 @@ class CardGame {
 
   public:
     CardGame();
+    ~CardGame();
     // Before new game, old game is deleted (free)
     void newGame(Reign* reign);
 

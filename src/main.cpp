@@ -32,16 +32,16 @@ void addCard (uint32_t card, const char* text, const char* op1, struct ReignPowe
 
 int main (int argc, char* argv[]) {
 
-  Reign reino;
+  Reign* reino = new Reign();
   CardGame cardGame;
 
-  reino.setKingName("OdnetninI");
-  reino.setReignPowers({10,5,20,35});
+  reino->setKingName("OdnetninI");
+  reino->setReignPowers({10,5,20,35});
   initializeCards();
   addCard(0, "Hay que construir un establo", "Hagamoslo", {0,15,0,-20}, "NO!", {0,-10,0,0}, "Haced algo más pequeño", {0,5,0,-10});
   addCard(1, "Atacad el reino vecino", "A LA CARGA", {0,-5,-10,-15}, "NO!", {5,0,0,0}, "Hagamos un Pacto", {0,5,-5,-10});
 
-  cardGame.newGame(&reino);
+  cardGame.newGame(reino);
   cardGame.gameLoop(cards);
 
   return 0;

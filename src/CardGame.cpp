@@ -13,6 +13,10 @@ CardGame::CardGame() {
   this->actualReign = nullptr;
 }
 
+CardGame::~CardGame() {
+  if(this->actualReign) delete this->actualReign;
+}
+
 void CardGame::newGame(Reign* reign) {
   if(this->actualReign) delete this->actualReign; // Only now, in future no
   this->actualReign = reign;
