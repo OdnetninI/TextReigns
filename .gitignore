@@ -30,3 +30,6 @@
 
 # CMake Directory
 build/
+
+# Vim
+session
