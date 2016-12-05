@@ -55,8 +55,8 @@ struct ReignPowers operator+ (struct ReignPowers a, struct ReignPowers b) {
   return {church, people, army, money};
 }
 
-bool isLose (Reign* reign) {
-  struct ReignPowers powers = reign->getReignPowers();
+bool CardGame::isLose () {
+  struct ReignPowers powers = this->actualReign->getReignPowers();
   if (powers.church <= 0 || powers.people <= 0 || powers.army <= 0 || powers.money <= 0) return true;
   return false;
 }
@@ -67,7 +67,7 @@ void CardGame::gameLoop(Card** cards) {
     exit(1);
   }
 
-  while (!isLose(this->actualReign)) {
+  while (!this->isLose()) {
     // Update Part1
     uint32_t card = std::rand()%MAX_CARDS;
     

@@ -14,6 +14,7 @@ class CardGame {
     ~CardGame();
     // Before new game, old game is deleted (free)
     void newGame(Reign* reign);
+    bool isLose();
 
     Reign* getLastGame();
 
