@@ -1,12 +1,11 @@
 #include "CardGame.hpp"
+#include "CardPacks.hpp"
 #include <cstdlib>
 #include <ctime>
 #include <iostream>
 #include "Card.hpp"
 #include "Reign.hpp"
 #include <cstdint>
-
-#define MAX_CARDS 2
 
 CardGame::CardGame() {
   std::srand(std::time(nullptr));
@@ -61,20 +60,18 @@ bool CardGame::isLose () {
   return false;
 }
 
-void CardGame::gameLoop(Card** cards) {
+void CardGame::gameLoop(CardPack* cards) {
   if (!this->actualReign) {
     std::cerr << "ERROR: No Reign was initialized" << "\n";
     exit(1);
   }
 
   while (!this->isLose()) {
-    // Update Part1
-    uint32_t card = std::rand()%MAX_CARDS;
-    
+    Card* card = cards->getRandomCard();
     // Draw
     std::cout << "Rey: " << this->actualReign->getKingName() << " Años al Poder: " << this->actualReign->getKingYears() << "\n";
     std::cout << this->actualReign->getReignPowers() << "\n";
-    std::cout << cards[card] << "\n";
+    std::cout << card << "\n";
     
     // Wait Input
     uint32_t opcion = 0;
@@ -84,7 +81,7 @@ void CardGame::gameLoop(Card** cards) {
     } while (opcion >= MAX_OPTIONS);
     
     // Update Part2
-    this->actualReign->setReignPowers(this->actualReign->getReignPowers()+cards[card]->getOption(opcion)->getChange());
+    this->actualReign->setReignPowers(this->actualReign->getReignPowers()+card->getOption(opcion)->getChange());
     this->actualReign->newYear();
   }
 

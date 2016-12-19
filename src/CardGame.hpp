@@ -3,7 +3,7 @@
 
 #include "Reign.hpp"
 
-class Card;
+class CardPack;
 
 class CardGame {
   private:
@@ -18,7 +18,7 @@ class CardGame {
 
     Reign* getLastGame();
 
-    void gameLoop(Card** cards);
+    void gameLoop(CardPack* cards);
 };
 
 #endif /* __CARDGAME_HPP__ */
