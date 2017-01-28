@@ -16,7 +16,10 @@ void CardPack::loadFromFile(const char* filename) {
   std::ifstream file(filename);
   if (!file.is_open()) return;
 
-  while (file.good()) {
+	uint64_t cards = 0;
+	file >> cards;
+	file.ignore();
+  for(uint64_t i = 0; i < cards; i++) {
     std::string text, msg1, msg2, msg3;
     int p1,p2,p3,p4;
     int p5,p6,p7,p8;
